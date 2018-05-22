@@ -35,11 +35,20 @@ app.post('/webhook', (req, res) => {
 
 });
 
+// Index route
+app.get('/', function (req, res) {
+  res.send('Hello world, I am a chat bot')
+})
+
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
 
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = "leyachtignilife06"
+const VERIFY_TOKEN = "CHALLENGE_ACCEPTED";
+  if (req.query['hub.verify_token'] === process.env.VERIFY_TOKEN){
+    return res.send(req.query['hub.challenge'])
+  }
+  res.send('wrong token')
 
   // Parse the query params
   let mode = req.query['hub.mode'];
