@@ -41,7 +41,7 @@ app.post('/webhook', (req, res) => {
 // Index route
 app.get('/', function (req, res) {
   res.send('Hello world, I am a chat bot')
-})
+});
 
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
