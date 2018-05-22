@@ -22,7 +22,7 @@ app.get('/webhook', (req, res) => {
 
   // Your verify token. Should be a random string.
   //let VERIFY_TOKEN = "leyachtignilife06"
-  const VERIFY_TOKEN = PAGE_ACCESS_TOKEN;
+  const VERIFY_TOKEN = "CHALLENGE_ACCEPTED";
 //const VERIFY_TOKEN = "leyachtignilife06";
   //if (req.query['hub.verify_token'] === process.env.VERIFY_TOKEN){
   //  return res.send(req.query['hub.challenge'])
