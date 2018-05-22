@@ -1,6 +1,9 @@
 {
   "name": "messenger-webhook",
   "version": "1.0.0",
+  "engines": {
+    "npm": "5.7.1"
+  },
   "description": "",
   "main": "index.js",
   "dependencies": {
